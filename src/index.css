@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+@keyframes fadeBackground {
+    0% {
+        color: #ffffff;
+    }
+    50% {
+        color: #FF3EA5;
+    }
+    100% {
+        color: #FF7ED4;
+    }
+}
+@keyframes borderfade {
+    0% {
+        box-shadow: 0 4px 10px #6420AA;
+    }
+    50% {
+        box-shadow: 0 4px 10px #FF3EA5;
+    }
+    100% {
+        box-shadow: 0 4px 10px #FF7ED4;
+    }
+}
+/* font-family: "Birthstone", cursive; */
+
+#root{
+    font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0%;
+    background-color: #424242;
+    background-image: url('public/bg.mp4');
+    /* animation: fadeBackground 5s infinite; */
+}
+.container{
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #48CFCB; /* Soft shadow */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    animation: borderfade 4s infinite;
+    color: #229799;
+    text-align: center;
+    margin: 10px;
+    
+
+}
+.container img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border:2px soild #ffffff;
+    
+}
+h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    animation: fadeBackground 5s infinite;
+}
+.timer{
+    display:flex;
+    justify-content: center;
+    gap: 30px;
+    text-transform: uppercase;
+}
+.timer p{
+    text-align: center;
+    text-decoration: solid;
+    font-size: 30px;
+}
+.wishbox p span{
+    text-transform: uppercase;
+    color: #FF3EA5;
+    font-style: bold;
+    margin: 5px;
+    font-size: 50px;
+    font-family: "Nerko One", cursive;
+    text-align: center;
+}
+.wishbox p {
+    color: #ffff;
+    font-size: 25px;
+    font-style: italic;
+    text-align: center ;
+    text-decoration: solid;
+}
+.balloon img{
+    position: absolute;
+    bottom: 300px;
+    border-radius: 0%;
+    width: 200px;
+    height: 200px;
+    left:10px;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+.balloon img:hover {
+    transform: rotate(-20deg);
+}
+.Footer{
+    color: #ffff;
+}
+.Footer p a{
+    text-decoration:none;
+    font-size:20px;
+    margin-left: 10px;
+    color: #FF3EA5;
+}
+.zone{
+    height: 30px;
+    width: 100%;
+}
+.timezone{
+    color: #ffffff;
+    padding-left: 15px;
+    text-align: left;
+}
