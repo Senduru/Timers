@@ -6,7 +6,7 @@ import balloon from '../assets/balloons.png';
 
 const CountdownTimer = () => {
   // Define the target date here
-  const [Changelayout,SetChangelayout]=useState(false)
+  const [Changelayout,SetChangelayout]=useState(true)
   const [Greeting,setGreeting]=useState('')
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const targetDate = new Date('Aug 31, 2024 00:00:00');
