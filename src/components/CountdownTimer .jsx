@@ -6,7 +6,7 @@ import balloon from '../assets/balloons.png';
 
 const CountdownTimer = () => {
   // Define the target date here
-  const [Changelayout,SetChangelayout]=useState(true);
+  const [Changelayout,SetChangelayout]=useState(false);
   const [Greeting,setGreeting]=useState('');
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const targetDate = new Date('Aug 31, 2024 00:00:00');
@@ -18,12 +18,7 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    const WishingTime = () => {
-      if(distance==='00:00:00')
-      {
-      SetChangelayout(true);
-      }
-    }
+    
     const updateGreeting = () => {
       const currentHour = new Date().getHours();
       const isAm= currentHour<6;
@@ -50,6 +45,7 @@ const CountdownTimer = () => {
         setTimeRemaining({ days, hours, minutes, seconds });
       } else {
         setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        SetChangelayout(true);
       }
     };
      WishingTime();
