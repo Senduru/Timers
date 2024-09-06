@@ -5,7 +5,7 @@ import CountdownTimer from './components/CountdownTimer ';
 function App() {
   return (
     <div className="App">
-      <CountdownTimer />
+      <CountdownTimer/>
     </div>
   );
 }
