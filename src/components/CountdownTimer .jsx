@@ -18,7 +18,12 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    
+    const WishingTime = () => {
+      if(distance==='00:00:00')
+      {
+      SetChangelayout(true);
+      }
+    }
     const updateGreeting = () => {
       const currentHour = new Date().getHours();
       const isAm= currentHour<6;
@@ -31,10 +36,7 @@ const CountdownTimer = () => {
     const calculateTimeRemaining = () => {
       const now = new Date();
       const distance = targetDate.getTime() - now.getTime();
-      if(distance==='00:00:00')
-      {
-      SetChangelayout(true);
-      }
+     
       if (distance > 0) {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor(
@@ -50,13 +52,14 @@ const CountdownTimer = () => {
         setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     };
-   
+     WishingTime();
     calculateTimeRemaining();
     updateGreeting();
     const intervalId = setInterval(calculateTimeRemaining, 1000); // Update every second
 
     return () => clearInterval(intervalId); // Clean up the interval on component unmount
   }, [targetDate]);
+    WishingTime();
   function playmusic(){
 
    const audio =new Audio(bgm);
